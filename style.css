@@ -1,0 +1,25 @@
+
+#cal {
+    width: 30%;
+    margin: auto;
+    border: 2px;
+    border-style: solid;
+    border-radius: 3px;
+}
+
+#display>p {
+
+}
+
+#allBtns {
+    display: flex;
+    padding: 15px;
+}
+
+#nums {
+    padding: 15px;
+}
+
+#operands {
+    padding: 15px;
+}
