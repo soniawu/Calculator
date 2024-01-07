@@ -15,3 +15,8 @@ Version 3
 - Add handling positive/negative for numbers
 - Improve divided by 0 error handling. Give message instead just return 0.
 - Clear out display message when a new operarion starts.
+
+Verwsion 4
+- Layout keypad
+- Use image for keys
+- Set display size

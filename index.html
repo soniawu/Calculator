@@ -14,48 +14,49 @@
                 <!-- <p>Reserved for Display</p> -->
                 <p></p>
             </div>
-                <div id="allBtns">
+            <div id="allBtns">
                 <div id="nums">
-                    <div id="numRow-1">
+                    <div id="numRow-1" class="numRow">
                         <button id="btnNum-1" class="num">1</button>
                         <button id="btnNum-2" class="num" >2</button>
                         <button id="btnNum-3" class="num">3</button>
                     </div>
-                    <div id="numRow-2">
+                    <div id="numRow-2" class="numRow">
                         <button id="btnNum-4" class="num">4</button>
                         <button id="btnNum-5" class="num">5</button>
                         <button id="btnNum-6" class="num">6</button>
                     </div>
-                    <div id="numRow-3">
+                    <div id="numRow-3" class="numRow">
                         <button id="btnNum-7" class="num">7</button>
                         <button id="btnNum-8" class="num">8</button>
                         <button id="btnNum-9" class="num">9</button>
                     </div>
-                    <div id="numRow-4">
+                    <div id="numRow-4" class="numRow">
                         <button id="btnNum-0" class="num">0</button>
                         <button id="btnNum-dot" class="decimal">.</button>
                         <button id="btnNum-posNeg" class="posOrNeg">+/-</button>
                     </div>
-                </div>
-            <div id="operators">
-                <div id="operatorRow-1">        
-                    <button id="cancel">AC</button>
-                    <button id="backOne">back</button>
-                </div>
-                <div id="operatorRow-2">        
-                    <button id="plus" class="operator">+</button>
-                    <button id="minus" class="operator">-</button>
-                </div>
-                <div id="operatorRow-3">        
-                    <button id="multiply" class="operator">X</button>
-                    <button id="divid" class="operator">/</button>
-                </div>
-                <div id="operatorRow-4">        
-                        <button id="equal">=</button>
-                </div>
-            </div>
-            </div>
-        </div>
+                </div> <!-- div "nums"-->
+                <div id="operators">
+                    <div id="operatorRow-1" class="operatorRow">        
+                        <button id="cancel">AC</button>
+                        <button id="backOne">&#x232b</button>
+                    </div>
+                    <div id="operatorRow-2" class="operatorRow">        
+                        <button id="multiply" class="operator">X</button>
+                        <button id="divid" class="operator">&#x00f7</button>
+                    </div>
+                    <div id="operatorRow-3" class="operatorRow">        
+                        <button id="plus" class="operator">+</button>
+                        <div id="operatorRow-3-1" class="operatorRow">
+                            <button id="minus" class="operator">-</button>
+                            <button id="equal">=</button>
+                        </div>
+                    </div>       
+                            
+                </div> <!-- div "operators"-->
+            </div> <!-- div "allBtns"-->
+        </div> <!-- div "cal"-->
     </div>
     <script src="js/calculator.js"></script>
   </body>
