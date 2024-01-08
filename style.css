@@ -1,25 +1,28 @@
 
 #container {
     margin: 20px;
+    /*background-color: bisque; */
 }
 
 #cal {
-    width: 300px;
-    height: 400px; 
+    width: 320px;
+    height: 420px; 
     border: 2px;
-    border-style: solid;
-    border-radius: 3px;
-    margin: 10px;
+    /*border-style: solid;
+    border-radius: 3px; 
+    margin: 10px; */
     display: flex;
     flex-direction: column;
+    background-image: url(images/calBox.png);
+    background-size: cover;
 }
 
 #display {
     width: 250px;
-    height: 30px;
-    border: 2px;
-    border-style: solid;
-    margin: 30px auto;
+    height: 40px;
+    background-color: white;
+    margin: 40px auto 20px;
+    box-shadow: inset 0 0 5px;
 }
 
 #display>p {
@@ -86,3 +89,6 @@
     flex-direction: column;
 }
 
+#logo {
+    margin: auto;
+}
