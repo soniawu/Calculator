@@ -32,6 +32,7 @@ for (let i = 0; i < numElms.length; i++) {
             opd_1 = setOperand();
             numStr = "";
             onOpd_2 = true;
+            isPos = true;
             displayContents.innerHTML = "";
         }
 
@@ -42,23 +43,24 @@ for (let i = 0; i < numElms.length; i++) {
 }
 
 /*
-    Event listener for back one button
+    Event listener for back space button
     Delete the last number from display and the numStr
-
-    !!! should think about what to do if operator is entered
-    and backOne key is clicked. Currently, backing the last 
-    digit of operand 1. 
 */
 
 const backOne = document.querySelector("#backOne");
 backOne.addEventListener("click", () => {
+    // if decimal point is deleted, allow it to enter againe 
+    if (numStr[numStr.length - 1] == ".") {
+        decmOn = false;
+    }
     numStr = numStr.substring(0,(numStr.length -1));
     displayContents.innerHTML = numStr;
 });
 
 /* 
     Event listener for AC button.
-    Empty the display and numStr
+    Empty the display and numStr.
+    Reset global variables.
 */ 
 const cancelAll = document.querySelector("#cancel");
 cancelAll.addEventListener("click", () => {
@@ -83,6 +85,9 @@ for (let i = 0; i < numOprt.length; i++) {
             opd_2 = setOperand();
             let result = operate(opd_1, opd_2, operator);
             if (typeof result === "number") {
+                if (result % 1 !== 0) {
+                    result = result.toFixed(4);
+                }
                 numStr = result.toString();
                 console.log(`numStr is ${numStr}`);
                 displayContents.innerHTML = numStr;
@@ -91,7 +96,7 @@ for (let i = 0; i < numOprt.length; i++) {
                 onOpd_2 = false;
                 operator = 0;
             } else {
-                resetGlob;
+                resetGlob();
                 displayContents.innerHTML = result;
                 console.log("I am here");
             }
@@ -122,6 +127,9 @@ equal.addEventListener("click", () =>{
         let result = operate(opd_1, opd_2, operator);
         resetGlob();
         if (typeof result === "number") {
+            if (result % 1 !== 0) {
+                result = result.toFixed(4);
+            }
             displayContents.innerHTML = result.toString();
         } else {
             displayContents.innerHTML = result;
@@ -170,8 +178,9 @@ sign.addEventListener("click", () => {
 });
 
 /**********************************************************
-    It's sunny day condition now. should take care of veridation
-    later in this function or separated function.
+    This function convert the numStr to a number.
+    The calling function will set it to one of the 
+    operands.
 **********************************************************/
 function setOperand() {
     let l = numStr.length - 1;
@@ -186,8 +195,6 @@ function setOperand() {
 /**********************************************************
     This function resets the global variables for a new operation
 **********************************************************/
-
-// reset global variables to the beginning
 function resetGlob() {
    opd_1 = 0;
    opd_2 = 0;
@@ -197,6 +204,7 @@ function resetGlob() {
    onOpd_2 = false; 
    decmOn = false;
    newOper = true;
+   isPos = true;
    displayContents.innerHTML = "";
 }
 
