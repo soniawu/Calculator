@@ -5,8 +5,8 @@
 }
 
 #cal {
-    width: 320px;
-    height: 420px; 
+    width: 350px;
+    height: 450px; 
     border: 2px;
     /*border-style: solid;
     border-radius: 3px; 
@@ -55,7 +55,7 @@
 }
 
 .operator, #cancel, #backOne, #equal {
-    width: 45px;
+    width: 50px;
     height: 40px;
     background-image: url("images/numBtn.jpg");
     background-size: cover;
